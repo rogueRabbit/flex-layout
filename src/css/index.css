@@ -20,7 +20,7 @@
 }
 
 .left-side-content {
-
+    margin-top: 20px;
 }
 
 .attrUl {
@@ -40,6 +40,7 @@
 
 .right-side {
     position: fixed;
+    top: 50px;
     right: 0;
     width: 50%;
 }

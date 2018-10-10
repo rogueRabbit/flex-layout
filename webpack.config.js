@@ -9,7 +9,7 @@ module.exports = {
         diceExample: './src/js/diceExample.js',
         listLayout: './src/js/listLayout.js',
         grailExample: './src/js/grailExample.js',
-        common: './src/js/common.js'
+        // common: './src/js/common.js'
     },
     output: {
         filename: "[name].bundle.js",
@@ -18,6 +18,11 @@ module.exports = {
     devtool: "inline-source-map",
     module: {
         rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: ['babel-loader']
+            },
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
@@ -30,22 +35,22 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: 'layoutIndex.html',
-            chunks:['index'],
+            chunks:['index', 'commons'],
         }),
         new HtmlWebpackPlugin({
             filename: 'diceExample.html',
             template: 'diceExample.html',
-            chunks: ['diceExample']
+            chunks: ['diceExample', 'commons']
         }),
         new HtmlWebpackPlugin({
             filename: 'listLayout.html',
             template: 'listLayout.html',
-            chunks: ['listLayout']
+            chunks: ['listLayout', 'commons']
         }),
         new HtmlWebpackPlugin({
            filename: 'grailExample.html',
            template: 'grailExample.html',
-           chunks: ['grailExample']
+           chunks: ['grailExample', 'commons']
         }),
         new webpack.ProvidePlugin({
             $: 'jquery',
@@ -55,7 +60,7 @@ module.exports = {
         splitChunks: {
             cacheGroups: {
                 commons: {
-                    name: "common",
+                    name: "commons",
                     chunks: "initial",
                     minChunks: 1
                 }

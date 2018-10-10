@@ -1,4 +1,5 @@
 import '../css/index.css';
+import '../js/common';
 
 // 设置flex-direction
 $('input[name="flexDirection"]').click(function(e){
