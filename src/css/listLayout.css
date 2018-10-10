@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.list-container {
+
+}
+
+.class-wrap {
+    padding: 20px 20px 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.btn {
+    flex: 1;
+    min-width: 45%;
+    max-width: 45%;
+    margin-bottom: 30px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    background-color: #f6f6f6;
+    color: #494949;
+}
+
+.list-wrap {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    padding: 0 20px 20px 20px;
+}
+
+.list-ul {
+    list-style: none;
+}
+
+.list-ul li:last-child {
+    border-bottom: none;
+}
+
+.item {
+    display: flex;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 10px 9px 10px 0;
+}
+
+.image-wrap {
+    flex: 1;
+}
+
+.content {
+    flex: 2;
+}
+
+.image-bg {
+    width: 95px;
+    height: 95px;
+    margin-right: 10px;
+    flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+    background-color: #f6f6f6;
+}
+
+.pro-block-item {
+    display: flex;
+    flex: 1;
+    -webkit-flex: 1;
+}
+
+.pro-detail {
+    width: 100%;
+    overflow: hidden;
+}
+
+.name {
+    font-size: 16px;
+}
+
+.pro-tkt-spot {
+    margin-top: 6px;
+    height: 15px;
+    line-height: 15px;
+    font-size: 12px;
+    color: #999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pro-act-info {
+    height: 15px;
+    line-height: 16px;
+    margin-top: 6px;
+    font-size: 12px;
+}
+
+.list-score {
+    color: #099fde;
+}
+
+.list-tkt-score {
+    line-height: 14px;
+    font-size: 12px;
+    color: #999;
+}
+
+.pro-tags {
+    margin-top: 8px;
+    height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.u-pro-tag {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+}
+
+.u-pro-tag i {
+    float: left;
+    padding: 1px 2px;
+    font-size: 11px;
+    line-height: 1;
+    color: #ff9a14;
+    border: 1px solid #ffcc89;
+    margin-right: 4px;
+    margin-bottom: 1px;
+}
+
+.u-pro-tag .green {
+    color: #19a0f0;
+    border: 1px solid rgba(25,160,240,0.3);
+}
+
+.pro-price {
+    display: flex;
+    width: 70px;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+    text-align: right;
+}
+
+.pro-tkt-price-info {
+    font-size: 12px;
+    color: #f40;
+}
+
+.pro-tkt-price-info i {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 2px;
+}
+
+.bottom-option {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    list-style: none;
+    background-color: #ffffff;
+}
+
+.bottom-option li {
+    flex: 1;
+    -webkit-flex: 1;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.center-option {
+    border-left: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+}

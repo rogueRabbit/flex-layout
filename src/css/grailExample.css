@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.grail-container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    height: 50px;
+    background-color: #ffcc89;
+    text-align: center;
+    line-height: 50px;
+}
+
+footer {
+    height: 50px;
+    background-color: #ff9a14;
+    text-align: center;
+    line-height: 50px;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+}
+
+.main-content {
+    flex: 1;
+    background-color: #19a0f0;
+}
+
+.nav, .aside {
+    flex: 0 0 12em;
+}
+
+.nav {
+    background-color: aqua;
+    order: -1;
+}
+
+.aside {
+    background-color: brown;
+}
+
+.example-1 {
+    display: flex;
+}
+
+.user-name-input {
+    max-width: 150px;
+    flex: 1;
+}
+
+.example-2 {
+    width: 200px;
+    height: 150px;
+    margin: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    background-color: #ffffff;
+}
+
+.item {
+    height: 50px;
+    flex: 0 0 25%;
+    border: 1px solid #ff4400;
+    display: inline-block;
+    box-sizing: border-box;
+}

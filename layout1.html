@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试flex布局</title>
+    <style type="text/css">
+        .box {
+            display: flex;
+            flex-direction: row;
+            background-color: gray;
+        }
+
+        .box-right {
+            display: flex;
+            flex-direction: row-reverse;
+            background-color: gray;
+        }
+
+        .box-top {
+            display: flex;
+            flex-direction: column;
+            background-color: gray;
+        }
+
+        .box-bottom {
+            display: flex;
+            flex-direction: column-reverse;
+            background-color: gray;
+        }
+
+        .box-revert {
+            display: flex;
+            flex-direction: initial;
+            background-color: gray;
+        }
+
+        .item {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            background-color: chartreuse;
+            text-align: center;
+            color: #ffffff;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        当flex-direction：row时，横向排列，左边为起点
+    </p>
+    <div class="box">
+        <span class="item">1</span>
+        <span class="item">2</span>
+        <span class="item">3</span>
+        <span class="item">4</span>
+        <span class="item">5</span>
+        <span class="item">6</span>
+    </div>
+    <p>
+        当flex-direction: row-reverse时，横向排列，右边为起点
+    </p>
+    <div class="box-right">
+        <span class="item">1</span>
+        <span class="item">2</span>
+        <span class="item">3</span>
+        <span class="item">4</span>
+        <span class="item">5</span>
+        <span class="item">6</span>
+    </div>
+    <p>
+        当flex-direction: column时，纵向排列，上边为起点
+    </p>
+    <div class="box-top">
+        <span class="item">1</span>
+        <span class="item">2</span>
+        <span class="item">3</span>
+        <span class="item">4</span>
+        <span class="item">5</span>
+        <span class="item">6</span>
+    </div>
+    <p>
+        当flex-direction: column-reverse时，纵向排列，下边为起点
+    </p>
+    <div class="box-bottom">
+        <span class="item">1</span>
+        <span class="item">2</span>
+        <span class="item">3</span>
+        <span class="item">4</span>
+        <span class="item">5</span>
+        <span class="item">6</span>
+    </div>
+    <p>当flex-direction：revert, initial, initial  </p>
+    <div class="box-revert">
+        <span class="item">1</span>
+        <span class="item">2</span>
+        <span class="item">3</span>
+        <span class="item">4</span>
+        <span class="item">5</span>
+        <span class="item">6</span>
+    </div>
+</body>
+</html>

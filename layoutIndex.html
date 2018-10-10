@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学习flex的布局</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <h3>设置样式：</h3>
+            <div class="left-side-content">
+                <div class="layout-item">
+                    <p>1.调整flex-direction：</p>
+                    <ul class="attrUl">
+                        <li>
+                            <input type="radio" value="row" name="flexDirection" checked>
+                            <span>row(横向排列)</span>
+                        </li>
+                        <li>
+                            <input type="radio" value="row-reverse" name="flexDirection">
+                            <span>row-reverse(横向排列，右边为起点)</span>
+                        </li>
+                        <li>
+                            <input type="radio" value="column" name="flexDirection">
+                            <span>column(纵向排列，上面为起点)</span>
+                        </li>
+                        <li>
+                            <input type="radio" value="column-reverse" name="flexDirection">
+                            <span>column-reverse(纵向排列，下面为起点)</span>
+                        </li>
+                    </ul>
+                    <p>2.调整flex-wrap属性：</p>
+                    <ul class="attrUl">
+                        <li>
+                            <input type="radio" value="nowrap" name="flexWrap" checked>
+                            <span>nowrap(不换行)</span>
+                        </li>
+                        <li>
+                            <input type="radio" value="wrap" name="flexWrap">
+                            <span>wrap(换行)</span>
+                        </li>
+                        <li>
+                            <input type="radio" value="wrap-reverse" name="flexWrap">
+                            <span>wrap-reverse(换行，后面的排在上面)</span>
+                        </li>
+                    </ul>
+                    <p>3.调整justify-content属性：</p>
+                    <i class="tips">提示：为看到效果，请将flex-wrap设置为wrap或者wrap-reserve</i>
+                    <ul class="attrUl">
+                        <li>
+                            <input type="radio" value="flex-start" name="justifyContent" checked>
+                            <span>flex-start(左对齐)</span>
+                        </li>
+                        <li>
+                            <input type="radio" value="flex-end" name="justifyContent">
+                            <span>flex-end(右对齐)</span>
+                        </li>
+                        <li>
+                            <input type="radio" value="center" name="justifyContent">
+                            <span>center(居中)</span>
+                        </li>
+                        <li>
+                            <input type="radio" value="space-between" name="justifyContent">
+                            <span>space-between(两端对齐)</span>
+                        </li>
+                        <li>
+                            <input type="radio" value="space-around" name="justifyContent">
+                            <span>space-around(每个项目两侧的间距相等)</span>
+                        </li>
+                    </ul>
+                    <p>4.调整align-items属性：</p>
+                    <ul class="attrUl">
+                        <li>
+                            <input type="radio" value="flex-start" name="alignItems" checked>
+                            <span>flex-start(顶对齐)</span>
+                        </li>
+                        <li>
+                            <input type="radio" value="flex-end" name="alignItems">
+                            <span>flex-end(底对齐)</span>
+                        </li>
+                        <li>
+                            <input type="radio" value="center" name="alignItems">
+                            <span>center(居中)</span>
+                        </li>
+                        <li>
+                            <input type="radio" value="baseline" name="alignItems">
+                            <span>baseline(项目第一行文字的基线对齐)</span>
+                        </li>
+                        <li>
+                            <input type="radio" value="stretch" name="alignItems">
+                            <span>stretch(默认，未设置高度，将占满整个容器的高度)</span>
+                        </li>
+                    </ul>
+                    <p>5.调整align-content属性：</p>
+                    <ul class="attrUl">
+                        <li>
+                            <input type="radio" value="flex-start" name="alignContent" checked>
+                            <span>flex-start(顶对齐)</span>
+                        </li>
+                        <li>
+                            <input type="radio" value="flex-end" name="alignContent">
+                            <span>flex-end(底对齐)</span>
+                        </li>
+                        <li>
+                            <input type="radio" value="center" name="alignContent">
+                            <span>center(居中)</span>
+                        </li>
+                        <li>
+                            <input type="radio" value="space-between" name="alignContent">
+                            <span>space-between(与交叉轴两端对齐)</span>
+                        </li>
+                        <li>
+                            <input type="radio" value="space-around" name="alignContent">
+                            <span>space-around(每个轴线两侧相等)</span>
+                        </li>
+                        <li>
+                            <input type="radio" value="stretch" name="alignContent">
+                            <span>stretch(轴线沾满整个交叉轴)</span>
+                        </li>
+                    </ul>
+                    <p>6.设置order属性，数值越小，越排在前面：</p>
+                    <button type="button" id="orderBtn" class="btn">将效果预览中为2的方块的order属性设置为15</button>
+                    <p>7.设置flex-grow属性，定义项目放大的比例，默认为0</p>
+                    <i class="tips">提示：为看到效果，需要设置项目的换行效果</i>
+                    <button type="button" id="growBtn" class="btn">将效果预览中为13的方块的flex-grow属性设置为4</button>
+                    <p>8.设置flex-shrink属性</p>
+                    <i class="tips">默认都为1，即等比例缩小，当一个设置为0时，则这个不缩小，其他的进行缩小</i>
+                    <button type="button" id="shrinkBtn" class="btn">将效果预览中为12的方块的flex-shrink属性设置为1</button>
+                    <p>9.设置align-self属性，允许单个项目与其他项目不一致的对齐方式，默认为auto,即继承容器的align-item属性</p>
+                    <i class="tips">为看到效果，需要将项目设置为纵向排列</i>
+                    <button type="button" id="selfBtn" class="btn">将效果预览中为5的方块的align-self属性设置为flex-end</button>
+                </div>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="right-side-content">
+                <h3>效果预览：</h3>
+            </div>
+            <div class="effect-item">
+                <ul class="effect-ul">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
+                    <li>11</li>
+                    <li>12</li>
+                    <li>13</li>
+                    <li>14</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

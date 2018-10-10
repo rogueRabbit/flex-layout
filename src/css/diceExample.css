@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 10px;
+}
+
+.dice-ul {
+    list-style: none;
+}
+
+.dice-ul li {
+    margin-bottom: 10px;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.project-wrap {
+    width: 120px;
+    height: 120px;
+    background-color: #000000;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.dice-content {
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.dice-box-1 {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #000000;
+}
+
+.dice-box-2 {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dice-box-3 {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.column-3 {
+    display: flex;
+    flex-basis: 100%;
+}
+
+.item-3-1 {
+    align-items: center;
+}
+
+.dice-box-3 span:nth-child(2) {
+    align-self: center;
+}
+
+.dice-box-3 span:nth-child(3) {
+    align-self: flex-end;
+}
+
+.dice-box-4 {
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.column {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-around;
+}
+
+
+
+
+
+
